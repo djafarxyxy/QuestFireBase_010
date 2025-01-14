@@ -1,5 +1,7 @@
 package com.example.project11.ui.home.page
 
+import android.os.Build
+import androidx.annotation.RequiresExtension
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -42,8 +44,8 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.project11.model.Mahasiswa
 import com.example.project11.ui.PenyediaViewModel
 import com.example.project11.ui.home.viewmodel.HomeViewModel
-import com.example.project11.ui.home.viewmodel.HomeuiState
 
+@RequiresExtension(extension = Build.VERSION_CODES.S, version = 7)
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(
@@ -73,7 +75,7 @@ fun HomeScreen(
         },
     ) { innerPadding ->
         HomeStatus(
-            homeUiState = viewModel.mhsUiState,
+            homeUiState = viewModel.mhsUiStete,
             retryAction = {viewModel.getMhs()}, modifier = Modifier.padding(innerPadding),
             onDetailClick = onDetailClick,
             onDeleteClick = {

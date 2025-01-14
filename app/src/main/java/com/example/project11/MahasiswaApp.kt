@@ -8,5 +8,5 @@ class MahasiswaApp: Application() {
     override fun onCreate() {
         super.onCreate()
         container = MahasiswaContainer()
-       }
+    }
 }

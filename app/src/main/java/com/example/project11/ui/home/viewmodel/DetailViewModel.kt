@@ -77,6 +77,5 @@ fun Mahasiswa.toDetailUiEvent(): InsertUiState {
         JudulSkripsi = JudulSkripsi,
         DosenPembimbing1 = DosenPembimbing1,
         DosenPembimbing2 = DosenPembimbing2
-
     )
 }

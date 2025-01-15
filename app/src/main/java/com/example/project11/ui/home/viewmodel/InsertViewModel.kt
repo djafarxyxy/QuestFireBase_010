@@ -86,11 +86,15 @@ data class FormErrorState(
     val alamat: String? = null,
     val jenisKelamin: String? = null,
     val kelas: String? = null,
-    val angkatan: String? = null
+    val angkatan: String? = null,
+    val JudulSkripsi: String? = null,
+    val DosenPembimbing1: String? = null,
+    val DosenPembimbing2: String? = null
 ) {
     fun isValid(): Boolean {
         return nim == null && nama == null && alamat == null &&
-                jenisKelamin == null && kelas == null && angkatan == null
+                jenisKelamin == null && kelas == null && angkatan == null &&
+                JudulSkripsi == null && DosenPembimbing1 == null && DosenPembimbing2 == null
     }
 }
 
@@ -100,7 +104,10 @@ data class MahasiswaEvent(
     val alamat: String = "",
     val jenisKelamin: String = "",
     val kelas: String = "",
-    val angkatan: String = ""
+    val angkatan: String = "",
+    val JudulSkripsi: String = "",
+    val DosenPembimbing1: String = "",
+    val DosenPembimbing2: String = ""
 )
 
 // Menyimpan Input Form Ke Dalam Entity
@@ -110,5 +117,8 @@ fun MahasiswaEvent.toMhsModel(): Mahasiswa = Mahasiswa(
     alamat = alamat,
     jenisKelamin = jenisKelamin,
     kelas = kelas,
-    angkatan = angkatan
+    angkatan = angkatan,
+    JudulSkripsi = JudulSkripsi,
+    DosenPembimbing1 = DosenPembimbing1,
+    DosenPembimbing2 = DosenPembimbing2
 )

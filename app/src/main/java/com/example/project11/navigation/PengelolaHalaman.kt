@@ -25,7 +25,7 @@ fun PengelolaHalaman(
     ) {
         composable(DestinasiHome.route) {
             HomeScreen(
-                navigateToitemEntry = {
+                navigateToItemEntry = {
                     navController.navigate(DestinasiEntry.route)
                 }
             )
